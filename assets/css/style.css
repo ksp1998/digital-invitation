@@ -1,0 +1,138 @@
+:root {
+  --primary-color: #da253c;
+  --secondary-color: #7a7b7c;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: url("/assets/images/pexels-viresh-studio-1444442.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center 25%;
+  background-size: cover;
+}
+
+#home-banner {
+  background-image: url("/assets/images/pexels-viresh-studio-1444442.jpg");
+  background-repeat: no-repeat;
+  background-position: center 25%;
+  background-size: cover;
+}
+
+#home-banner::before {
+  content: "";
+  position: absolute;
+  top: 4em;
+  left: 4em;
+  width: 100px;
+  height: 160px;
+  background: url("/assets/images/ganpati.png") no-repeat;
+  background-size: 100px;
+}
+
+#hero-section > div,
+#wish-section > div {
+  background-color: #00000099;
+}
+
+#hero-section h1 {
+  font-size: 6rem;
+}
+
+#show-invitation {
+  background: linear-gradient(var(--primary-color), darkred);
+  padding: 0.6em 1.5em;
+  cursor: pointer;
+}
+
+.primary-color {
+  color: var(--primary-color);
+}
+
+.secondary-color {
+  color: var(--secondary-color);
+}
+
+.primary-bg {
+  background-color: var(--primary-color);
+}
+
+.secondary-bg {
+  background-color: var(--secondary-color);
+}
+
+.primary-border {
+  border: 1px solid var(--primary-color);
+}
+
+.timer {
+  font-size: 4rem;
+}
+
+.section-title {
+  font-size: 4rem;
+  color: var(--primary-color);
+}
+
+.profile-container img {
+  width: 380px;
+  height: 380px;
+  object-fit: contain;
+  border-radius: 50%;
+  background: brown;
+}
+
+@media (width < 768px) {
+  #hero-section h1 {
+    font-size: 4rem;
+  }
+
+  .section-title {
+    font-size: 3rem;
+  }
+
+  .profile-container img {
+    width: 250px;
+    height: 250px;
+  }
+}
+
+@media (width < 480px) {
+  #hero-section h1 {
+    font-size: 3rem;
+  }
+
+  #family img {
+    width: 100px !important;
+    height: 100px;
+  }
+}
+
+.animated {
+  opacity: 0;
+  transition: opacity 0.6s ease-out, translate 0.6s ease-out;
+}
+
+.animated.top {
+  translate: 0 -80px;
+}
+
+.animated.bottom {
+  translate: 0 80px;
+}
+
+.animated.right {
+  translate: -50% 0;
+}
+
+.animated.left {
+  translate: 50% 0;
+}
+
+.animated.show {
+  opacity: 1;
+  translate: 0;
+}
